@@ -8,6 +8,11 @@ public class CombatPlayerController : MonoBehaviour
     protected PlayerInputControls inputControls;
     protected CombatPlayerStateMachine stateMachine;
 
+    [field: SerializeField] public CharacterController CharacterController { get; private set; }
+    [field: SerializeField] public ForceReciever ForceReciever { get; private set; }
+    [field: SerializeField] public float MovementSpeed { get; private set; }
+    [field: SerializeField] public float RotationDamping { get; private set; }
+
     private void Awake()
     {
         stateMachine = new CombatPlayerStateMachine(this);
