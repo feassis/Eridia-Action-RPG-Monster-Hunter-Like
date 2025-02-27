@@ -665,6 +665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <CharacterController>k__BackingField: {fileID: 1362726268}
   <ForceReciever>k__BackingField: {fileID: 1362726267}
+  <CharacterAnimator>k__BackingField: {fileID: 3166192304163382203}
   <MovementSpeed>k__BackingField: 6
   <RotationDamping>k__BackingField: 30
 --- !u!114 &1362726267

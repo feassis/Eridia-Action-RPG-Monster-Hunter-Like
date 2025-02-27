@@ -10,6 +10,7 @@ public class CombatPlayerController : MonoBehaviour
 
     [field: SerializeField] public CharacterController CharacterController { get; private set; }
     [field: SerializeField] public ForceReciever ForceReciever { get; private set; }
+    [field: SerializeField] public Animator CharacterAnimator { get; private set; }
     [field: SerializeField] public float MovementSpeed { get; private set; }
     [field: SerializeField] public float RotationDamping { get; private set; }
 
@@ -29,6 +30,15 @@ public class CombatPlayerController : MonoBehaviour
         stateMachine.ChangeState(State.SHEATHED);
     }
 
+    public void PlayCharacterAnimation(string animName)
+    {
+        CharacterAnimator.Play(animName);
+    }
+
+    public void SetAnimationParam(string paramName, float paramValue, float paramDamping = 0f, float deltaTime = 0f)
+    {
+        CharacterAnimator.SetFloat(paramName, paramValue,paramDamping, deltaTime);
+    }
 
     private void OnMoveCanceled(Vector2 vector2)
     {
