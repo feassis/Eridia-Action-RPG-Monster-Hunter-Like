@@ -35,11 +35,20 @@ public partial class @PlayerInputControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Camera"",
+                    ""type"": ""Value"",
+                    ""id"": ""3bafe3cd-806c-4374-add3-ea5182b2d4d4"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
                 {
-                    ""name"": ""2D Vector"",
+                    ""name"": ""WASD"",
                     ""id"": ""40d9444f-1148-4852-80b6-f21f5f50bc5d"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
@@ -94,7 +103,7 @@ public partial class @PlayerInputControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""2D Vector"",
+                    ""name"": ""GAmePag"",
                     ""id"": ""63925bef-ab32-4963-a721-68e8d4509d45"",
                     ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
@@ -147,6 +156,116 @@ public partial class @PlayerInputControls: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""221fee1c-74cd-46d0-bb9d-adceb07da509"",
+                    ""path"": ""2DVector(mode=2)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Camera"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""5f9370fd-62d3-4114-b0e5-7c4b6e7b337a"",
+                    ""path"": ""<Mouse>/delta/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Camera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""8f846e3e-f7df-4ebe-83b5-7a85f458a970"",
+                    ""path"": ""<Mouse>/delta/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Camera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""7c549bc5-bcc0-464c-989b-94f37185fcc6"",
+                    ""path"": ""<Mouse>/delta/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Camera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""78972fd9-5544-45bf-8427-0f8281d88460"",
+                    ""path"": ""<Mouse>/delta/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Camera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""7b175bfa-db3b-44b0-9d87-a9b93858fdc1"",
+                    ""path"": ""2DVector(mode=2)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Camera"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""352cb8ea-f5b3-4653-a4a5-3419a4e9bd5d"",
+                    ""path"": ""<Gamepad>/rightStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Camera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""ed7e04bd-714a-462d-b7de-8d1dbea9f7c8"",
+                    ""path"": ""<Gamepad>/rightStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Camera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""16bcea7b-9484-4e00-9229-764869f8533e"",
+                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Camera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""fadf9555-7e05-4a9a-8557-d598f60b4627"",
+                    ""path"": ""<Gamepad>/rightStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Camera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -156,6 +275,7 @@ public partial class @PlayerInputControls: IInputActionCollection2, IDisposable
         // CombatMoveset
         m_CombatMoveset = asset.FindActionMap("CombatMoveset", throwIfNotFound: true);
         m_CombatMoveset_Move = m_CombatMoveset.FindAction("Move", throwIfNotFound: true);
+        m_CombatMoveset_Camera = m_CombatMoveset.FindAction("Camera", throwIfNotFound: true);
     }
 
     ~@PlayerInputControls()
@@ -223,11 +343,13 @@ public partial class @PlayerInputControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_CombatMoveset;
     private List<ICombatMovesetActions> m_CombatMovesetActionsCallbackInterfaces = new List<ICombatMovesetActions>();
     private readonly InputAction m_CombatMoveset_Move;
+    private readonly InputAction m_CombatMoveset_Camera;
     public struct CombatMovesetActions
     {
         private @PlayerInputControls m_Wrapper;
         public CombatMovesetActions(@PlayerInputControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_CombatMoveset_Move;
+        public InputAction @Camera => m_Wrapper.m_CombatMoveset_Camera;
         public InputActionMap Get() { return m_Wrapper.m_CombatMoveset; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -240,6 +362,9 @@ public partial class @PlayerInputControls: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @Camera.started += instance.OnCamera;
+            @Camera.performed += instance.OnCamera;
+            @Camera.canceled += instance.OnCamera;
         }
 
         private void UnregisterCallbacks(ICombatMovesetActions instance)
@@ -247,6 +372,9 @@ public partial class @PlayerInputControls: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @Camera.started -= instance.OnCamera;
+            @Camera.performed -= instance.OnCamera;
+            @Camera.canceled -= instance.OnCamera;
         }
 
         public void RemoveCallbacks(ICombatMovesetActions instance)
@@ -267,5 +395,6 @@ public partial class @PlayerInputControls: IInputActionCollection2, IDisposable
     public interface ICombatMovesetActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnCamera(InputAction.CallbackContext context);
     }
 }
